@@ -1,0 +1,252 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+body{
+    font-family: "DM Sans", sans-serif;
+    background-color: hsl(0, 0%, 96.1%);
+    font-size: 18px;
+    padding: 24px;
+    font-weight: 400;
+}
+
+.bento{
+    max-height: 100vh;
+    max-width: 150vh;
+    margin: auto;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "social"
+    "multiple"
+    "consistency"
+    "timing"
+    "followers"
+    "growth"
+    "schedule"
+    "contente";
+
+    @media screen and (min-width: 768px) {
+        row-gap: 18px;
+        column-gap: 16px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 2fr 50px 1fr 1.2fr;
+        grid-template-areas: 
+        "schedule social social timing"
+        "schedule multiple  consistency timing"
+        "contente multiple  consistency timing"
+        "contente growth    followers   followers"
+        
+        
+    }
+}
+
+.bento-item{
+    padding: 16px;
+    border-radius: 16px;
+    /* background-color: hsl(254, 88%, 90%); */
+    display: grid;
+    gap: 16px;
+    text-wrap: pretty;
+    width: 100%;
+    h2{
+        font-size: large;
+    }
+}
+
+.text-yellow{
+    color: hsl(39, 100%, 71%);
+}
+.text-purple{
+    color: hsl(256, 67%, 59%);
+}
+h2{
+    text-wrap: balance;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.schedule{
+    max-height: 100vh;
+ grid-area: schedule;
+ background-color: hsl(31, 66%, 93%);
+ @media screen and (min-width: 768px) {
+    min-height: 50vh;
+    @media screen and (min-width: 768px) {
+        h2{
+            margin-top: 30px;
+            font-size: 35px;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+    }
+ }
+ img{
+    width: 120px;
+    @media screen and (min-width: 768px) {
+        width: 150px;
+        margin: auto;
+        margin-bottom: 30em;
+    }
+}
+}
+.social{
+    grid-area: social;
+    background-color: hsl(256, 67%, 59%);
+    text-align: center;
+    color: white;
+    @media screen and (min-width: 768px) {
+        /* max-height: 50vh; */
+    }
+    img {
+        margin: auto;
+        margin-top: 0;
+    }
+    h2{
+        font-size: 50px;
+        font-weight: 300;
+        margin-top: 20px;
+        line-height: 1.1;
+    }
+    p{
+        margin-bottom: 15px;
+    }
+}
+.timing{
+    grid-area: timing;
+    background-color: hsl(254, 88%, 90%);
+    text-align: center;
+    img {
+        margin: auto;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 10px;
+        img{
+            margin-left: 14px;
+            height: 320px;
+            width: 100%;
+            object-fit: fill;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        h2{
+            text-align: left;
+            margin-top: 3px;
+            font-size: 30px;
+            padding: 10px;
+        }
+        p{
+            text-align: left;
+            margin-left: 5px;
+            /* padding: 1; */
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+    }
+}
+.contente{
+    grid-area: contente;
+    background-color: hsl(39, 100%, 71%);
+    @media screen and (min-width: 768px) {
+        padding: px;
+        h2{
+            font-size: 30px;
+        }
+        img{
+            @media screen and (min-width: 768px) {
+                width: 100%;
+                margin-bottom: 35px;
+                margin-bottom: 0;
+            }
+            
+        }
+    }
+}
+.multiple{
+    grid-area: multiple;
+    background-color: white;
+    @media screen and (min-width: 768px) {
+        h2{
+            font-size: 30px;
+        }
+    }
+   
+}
+.growth{
+    background-color: white;
+    grid-area: growth;
+    h2{
+        font-size: inherit;
+        font-weight: 400;
+    }
+    .large{
+        font-size: larger;
+        font-weight: 500;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 35px;
+    }
+    img{
+        width: 200px;
+        @media screen and (min-width: 768px) {
+            width: 100%;
+        }
+    }
+}
+.consistency{
+    grid-area: consistency;
+    overflow: hidden;
+    padding-block-end: 0;  /*indcase */
+    background-color: hsl(39, 100%, 71%);
+    @media screen and (min-width: 768px) {
+        min-height: 250px;
+        /* padding: 4px; */
+        h2{
+            font-size: 23px;
+        }
+    }
+    img{
+        width: 250px;
+        @media screen and (min-width: 768px) {
+            width: 100%;
+        }
+    }
+}
+.followers{
+    max-height: 90vh;
+    /* display: flex; */
+    grid-area: followers;
+    /* place-items: center; */
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    /* h2{
+        
+    } */
+    @media screen and (min-width: 768px) {
+        display: flex;
+        h2{
+            margin-top: 60px;
+            font-size: 30px;
+            font-weight: 200;
+        }
+    }
+    img{
+        width: 200px;
+        @media screen and (min-width: 768px) {
+            gap: 16;
+            justify-content: flex-start;
+            
+        }
+    }
+}   
+
+/* hsl(0 0% 96.1%) */
